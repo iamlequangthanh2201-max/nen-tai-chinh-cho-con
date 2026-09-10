@@ -472,7 +472,7 @@ PAGE = '''<!doctype html>
   </header>
   <aside class="side" id="side" aria-label="Mục lục">
     <div class="side-head">
-      <b><span class="bmoji" aria-hidden="true">🪙</span>Nền tài chính cho con</b>
+      <b><span class="bmoji" aria-hidden="true">💸</span>Nền tài chính cho con</b>
       <button class="side-x" id="sidex" type="button" aria-label="Đóng mục lục">&times;</button>
     </div>
     <nav class="side-nav"><ol id="chnav"></ol></nav>
