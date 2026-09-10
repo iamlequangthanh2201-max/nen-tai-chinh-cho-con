@@ -77,7 +77,7 @@
     if (push !== false) { try { history.replaceState(null, '', '#' + (anchor || id)); } catch (e) {} }
     var t = anchor ? document.getElementById(anchor) : null;
     if (t) {
-      var off = (innerWidth < 1040 ? 66 : 14);
+      var off = (innerWidth < 900 ? 66 : 14);
       window.scrollTo(0, Math.max(0, Math.round(t.getBoundingClientRect().top + window.pageYOffset - off)));
     } else window.scrollTo(0, 0);
   }
@@ -86,14 +86,14 @@
     side.classList.toggle('open', open);
     scrim.classList.toggle('on', open);
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    document.body.style.overflow = (open && innerWidth < 1040) ? 'hidden' : '';
+    document.body.style.overflow = (open && innerWidth < 900) ? 'hidden' : '';
   }
   burger.addEventListener('click', function () { drawer(!side.classList.contains('open')); });
   scrim.addEventListener('click', function () { drawer(false); });
   $('sidex').addEventListener('click', function () { drawer(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') drawer(false); });
   addEventListener('resize', function () {
-    if (innerWidth >= 1040) { side.classList.remove('open'); scrim.classList.remove('on'); document.body.style.overflow = ''; }
+    if (innerWidth >= 900) { side.classList.remove('open'); scrim.classList.remove('on'); document.body.style.overflow = ''; }
   });
 
   document.addEventListener('click', function (e) {

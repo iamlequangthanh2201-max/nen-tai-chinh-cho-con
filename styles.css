@@ -26,19 +26,20 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);
 
 /* ---------- khung app ---------- */
 .app{min-height:100vh}
-@media(min-width:1040px){.app{display:grid;grid-template-columns:var(--side-w) minmax(0,1fr);align-items:start}}
+@media(min-width:900px){.app{display:grid;grid-template-columns:var(--side-w) minmax(0,1fr);align-items:start}}
 .doc{min-width:0;padding:18px 16px calc(64px + 30vh)}
-@media(min-width:1040px){.doc{padding:26px 34px calc(80px + 30vh)}}
-.doc-in{max-width:760px;min-width:0}
+@media(min-width:900px){.doc{padding:26px 34px calc(80px + 30vh)}}
+@media(min-width:1400px){.doc{padding:30px 48px calc(80px + 30vh)}}
+.doc-in{width:100%;max-width:1320px;margin-inline:auto;min-width:0}
 main section{display:none;scroll-margin-top:var(--top-h)}
 main section.live{display:block}
 .anchor{scroll-margin-top:calc(var(--top-h) + 10px)}
-@media(min-width:1040px){.anchor{scroll-margin-top:14px}}
+@media(min-width:900px){.anchor{scroll-margin-top:14px}}
 
 /* ---------- thanh trên (màn hẹp) ---------- */
 .topbar{position:sticky;top:0;z-index:60;height:var(--top-h);display:flex;align-items:center;
   gap:10px;padding:0 12px;background:var(--ground);border-bottom:var(--hair)}
-@media(min-width:1040px){.topbar{display:none}}
+@media(min-width:900px){.topbar{display:none}}
 .burger{display:inline-flex;align-items:center;gap:8px;flex:none;font-family:var(--body);
   font-size:12px;font-weight:600;color:var(--ink);background:var(--surface);border:var(--hair);
   border-radius:var(--r-pill);padding:8px 13px 8px 11px;cursor:pointer}
@@ -52,8 +53,8 @@ main section.live{display:block}
 
 /* ---------- cột menu ---------- */
 .side{background:var(--surface);border-right:var(--hair);display:flex;flex-direction:column}
-@media(min-width:1040px){.side{position:sticky;top:0;height:100vh;overflow-y:auto;overscroll-behavior:contain}}
-@media(max-width:1039px){
+@media(min-width:900px){.side{position:sticky;top:0;height:100vh;overflow-y:auto;overscroll-behavior:contain}}
+@media(max-width:899px){
   .side{position:fixed;inset:0 auto 0 0;width:min(300px,86vw);z-index:80;transform:translateX(-103%);
     transition:transform .18s ease-out;overflow-y:auto;box-shadow:0 0 40px rgba(31,52,56,.18)}
   .side.open{transform:none}
@@ -61,13 +62,13 @@ main section.live{display:block}
     pointer-events:none;transition:opacity .18s}
   .scrim.on{opacity:1;pointer-events:auto}
 }
-@media(min-width:1040px){.scrim{display:none}}
+@media(min-width:900px){.scrim{display:none}}
 .side-head{padding:15px 16px 12px;border-bottom:var(--hair);display:flex;align-items:center;gap:9px}
 .side-head b{font-family:var(--display);font-weight:800;font-size:14.5px;letter-spacing:-.02em}
 .bmoji{font-size:15px;line-height:1;margin-right:7px;
   font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif}
 .side-x{display:none}
-@media(max-width:1039px){.side-x{display:inline-flex;margin-left:auto;border:0;background:transparent;
+@media(max-width:899px){.side-x{display:inline-flex;margin-left:auto;border:0;background:transparent;
   color:var(--ink-3);width:30px;height:30px;align-items:center;justify-content:center;
   font-size:19px;cursor:pointer;line-height:1}}
 .side-nav{padding:8px 8px 32px}
@@ -87,7 +88,7 @@ li.on .sub-list{display:block}
   padding:5px 8px 5px 10px;border-left:2px solid var(--line);transition:color .12s,border-color .12s}
 .sub-list a:hover{color:var(--ink)}
 .sub-list a.on{color:var(--brand-ink);border-left-color:var(--brand-ink);font-weight:600}
-@media(max-width:1039px){
+@media(max-width:899px){
   .ch-btn{padding:13px 11px;font-size:13.5px}
   .sub-list a{padding:13px 10px 13px 11px;font-size:12.8px}
 }
@@ -297,6 +298,7 @@ li.lab-brand .lab{color:var(--brand-ink);background:var(--brand-wash)}
 /* ---------- từ vựng ---------- */
 .vocab{display:grid;gap:10px;margin:16px 0}
 @media(min-width:760px){.vocab{grid-template-columns:1fr 1fr}}
+@media(min-width:1280px){.vocab{grid-template-columns:repeat(3,1fr)}}
 .vword{background:var(--surface);border:var(--hair);border-radius:var(--r-chip);padding:13px 16px}
 .vword[hidden]{display:none}
 .vword b{display:block;font-family:var(--display);font-weight:700;font-size:15px;
